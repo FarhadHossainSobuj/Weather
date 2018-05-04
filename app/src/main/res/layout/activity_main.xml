@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bac"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/ivWeather"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/todo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+             />
+
+        <TextView
+            android:id="@+id/tvCity"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            android:textColor="@color/colorText"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/ivWeather"
+        android:layout_marginBottom="80dp"
+        android:hint="@string/temperature"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        android:textColor="@color/colorText"
+        android:layout_alignLeft="@+id/ivWeather" />
+
+    <TextView
+        android:id="@+id/tvWeatherType"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTemperature"
+        android:layout_toEndOf="@+id/tvTemperature"
+        android:hint="@string/cloud"
+        android:textColor="@color/colorText"
+        android:padding="10dp"
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/tvTemperature" />
+
+</RelativeLayout>
